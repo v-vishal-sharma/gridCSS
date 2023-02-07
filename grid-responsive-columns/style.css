@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+.basic-grid{
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    /* auto-fit will fit the given block in the given area i.e 3 blocks will expland on the whole width of the page. */
+    /* auto-fill will keep the blocks of the given length and make space for more blocks even if the blocks are not present in the html. */
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: #353535;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 500ms;
+    border-radius: 4px;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+}
+
+.card:hover{
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+
+}

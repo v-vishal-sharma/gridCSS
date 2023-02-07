@@ -1,0 +1,49 @@
+body{
+    background: black;
+    color: white;
+}
+
+.photo-grid{
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;    
+}
+
+@media screen and (min-width: 600px){
+    .card-tall{
+        grid-row: span 2 / auto; /*start/end*/
+        /* grid-row: 1/4 -> photo will start from grid col 1 row 1 and expand till col 1 row 4. this is the manual way */
+    }
+    
+    .card-wide{
+        grid-column: span 2/auto;
+    }
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: #353535;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 500ms;
+    border-radius: 4px;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card:hover{
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+
+}
